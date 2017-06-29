@@ -30,7 +30,7 @@ function addAging() {
             jsBadgeEle.insertBefore(div, jsBadgeEle.firstChild);
           }
         };
-        var cardHref = cards[index].getElementsByClassName("js-card-name")[0].innerText;
+        var cardHref = cards[index].getAttribute('href');
         xhr.open("GET", 'https://' + document.domain + cardHref + '.json');
         xhr.send();
       }
